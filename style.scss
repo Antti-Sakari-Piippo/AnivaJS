@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Unna', serif;
+}
+:root {
+    --bg: #060606;
+    --footer-color: #131313;
+    --header-color: #4b4740;
+    --distorted-bg: #131313;
+    --noise: #ffffff;
+}
+body {
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004) !important;
+    background-repeat: repeat;
+    background-color: var(--bg);
+    background-image: url(./images/grain.png);
+}
+
+img {
+    object-fit: cover;
+    max-width: 100%;
+    filter: grayscale(1);
+}
+
+#lighthouse2 {
+    object-position: 0% 10%;
+}
+
+a:active,
+a:focus {
+    outline: none;
+}
+.container__grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 6rem;
+    gap: 6rem;
+    flex-wrap: wrap;
+}
+
+.container__grid:last-child {
+    margin-bottom: 6rem;
+}
+
+.lighthouse {
+    flex-wrap: wrap-reverse;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    .elem {
+        width: 50.2rem;
+        img {
+            max-height: 44.625rem;
+            height: 37.75rem;
+        }
+        .tall {
+            height: 46.25rem;
+            width: 50.2rem;
+        }
+    }
+    h3 {
+        margin-bottom: 1.2rem;
+    }
+    img {
+        max-height: 44.625rem;
+        aspect-ratio: 4/3;
+    }
+}
+
+col {
+    max-width: 27vw;
+}
+h1,
+span {
+    font-size: 6rem;
+    color: var(--header-color);
+    font-weight: 200;
+    margin-top: 14rem;
+}
+
+h1 {
+    span {
+        margin-left: 3.6rem;
+    }
+}
+h3 {
+    font-size: 2.82rem;
+    letter-spacing: 0.1rem;
+    line-height: 4rem;
+}
+h4 {
+    font-size: 2.1rem;
+}
+h4 {
+    font-size: 1.875rem;
+}
+p {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    font-weight: 100;
+    letter-spacing: 0.14rem;
+    margin-bottom: 1rem;
+}
+.italic {
+    font-style: italic;
+}
+a {
+    cursor: pointer;
+}
+a:hover {
+    font-weight: 800;
+}
+
+header {
+    height: 97.7rem;
+    position: relative;
+    h1 {
+        position: absolute;
+        z-index: 1000;
+        top: 19rem;
+        left: 16%;
+    }
+    width: 100%;
+    .header__image-container {
+        background-image: url(./images/anivaVeryLarge.jpg);
+        background-repeat: no-repeat;
+        position: relative;
+        height: 88.9375rem;
+        max-width: 100%;
+        background-position-x: 39%;
+        background-position-y: -74.6875rem;
+        filter: grayscale(0.5);
+    }
+}
+img.ripped {
+    position: relative;
+    width: 100%;
+}
+
+img.full-width {
+    width: 100%;
+    margin-bottom: 6rem;
+}
+
+footer {
+    width: 100%;
+    background-color: var(--footer-color);
+    padding: 6rem 0 4.1rem 0;
+    .container__grid {
+        justify-content: space-between;
+        margin: 0 11vw 0 11vw;
+        width: min(106.25rem, 80%);
+        grid-template-columns: repeat(3, 1fr);
+        margin: auto;
+        align-items: baseline;
+        margin-bottom: 0 !important;
+        .footer__legal--col {
+            margin-top: -2rem;
+            max-width: 58ch;
+            .footer__legal__logo {
+                h2 {
+                    font-size: 4.3rem;
+                    margin-right: 1rem;
+                }
+                img {
+                    aspect-ratio: unset;
+                    object-fit: none;
+                }
+            }
+        }
+        .footer__links__navigate--col {
+            margin-right: 2rem;
+        }
+        .footer__social--col {
+            img {
+                aspect-ratio: unset;
+                object-fit: none;
+                margin-right: 1.1rem;
+            }
+            p {
+                margin-top: 0.3rem;
+            }
+            .footer__social--col--row {
+                margin: 0.55rem 0;
+                cursor: pointer;
+            }
+        }
+        h4 {
+            margin-bottom: 1.7rem;
+        }
+    }
+}
+
+@media only screen and (min-width: 125em) {
+    h1,
+    span {
+        font-size: 8rem;
+    }
+}
+
+@media only screen and (max-width: 75em) {
+    h1 {
+        left: 8% !important;
+    }
+    body .container__grid .footer__legal--col {
+        max-width: 100%;
+    }
+    body .footer .container__grid {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
