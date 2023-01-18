@@ -29,6 +29,10 @@ img {
 #lighthouse2 {
     object-position: 0% 10%;
 }
+.elem__container,
+.elem {
+    max-width: 50.0625rem;
+}
 
 a:active,
 a:focus {
@@ -40,15 +44,10 @@ a:focus {
     align-items: center;
     margin-bottom: 6rem;
     gap: 6rem;
-    flex-wrap: wrap;
 }
 
 .container__grid:last-child {
     margin-bottom: 6rem;
-}
-
-.lighthouse {
-    flex-wrap: wrap-reverse;
 }
 
 .flex {
@@ -60,14 +59,13 @@ a:focus {
     width: 80%;
     margin: auto;
     .elem {
-        width: 50.2rem;
+        width: 47%;
         img {
             max-height: 44.625rem;
             height: 37.75rem;
         }
         .tall {
             height: 46.25rem;
-            width: 50.2rem;
         }
     }
     h3 {
@@ -107,7 +105,7 @@ h4 {
     font-size: 1.875rem;
 }
 p {
-    font-size: 1.4rem;
+    font-size: 1.35rem;
     line-height: 1.6rem;
     font-weight: 100;
     letter-spacing: 0.14rem;
@@ -117,7 +115,10 @@ p {
     font-style: italic;
 }
 a {
+    font-size: 1.35rem;
+    color: white;
     cursor: pointer;
+    display: block;
 }
 a:hover {
     font-weight: 800;
@@ -170,6 +171,8 @@ footer {
             margin-top: -2rem;
             max-width: 58ch;
             .footer__legal__logo {
+                margin-left: 0.5rem;
+                margin-bottom: 1rem;
                 h2 {
                     font-size: 4.3rem;
                     margin-right: 1rem;
@@ -179,9 +182,15 @@ footer {
                     object-fit: none;
                 }
             }
+            .footer__company-info p {
+                margin-bottom: 0.5rem;
+            }
         }
         .footer__links__navigate--col {
             margin-right: 2rem;
+            a {
+                margin-bottom: 1rem;
+            }
         }
         .footer__social--col {
             img {
@@ -189,8 +198,10 @@ footer {
                 object-fit: none;
                 margin-right: 1.1rem;
             }
-            p {
-                margin-top: 0.3rem;
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
             .footer__social--col--row {
                 margin: 0.55rem 0;
@@ -204,6 +215,7 @@ footer {
 }
 
 @media only screen and (min-width: 125em) {
+    //2000px
     h1,
     span {
         font-size: 8rem;
@@ -211,6 +223,7 @@ footer {
 }
 
 @media only screen and (max-width: 75em) {
+    //1200px
     h1 {
         left: 8% !important;
     }
@@ -220,5 +233,23 @@ footer {
     body .footer .container__grid {
         margin-left: auto;
         margin-right: auto;
+    }
+}
+
+@media only screen and (max-width: 100em) {
+    .container__grid {
+        flex-wrap: wrap;
+    }
+    .container__grid.lighthouse {
+        flex-wrap: wrap-reverse;
+    }
+
+    .container .lighthouse .elem,
+    .container .elem {
+        width: unset;
+        max-width: unset;
+        img {
+            width: 56.125rem;
+        }
     }
 }
