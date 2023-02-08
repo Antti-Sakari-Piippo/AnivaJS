@@ -9,7 +9,7 @@
 :root {
   --bg: #0e0e0e;
   --footer-color: #131313;
-  --header-color: #484141;
+  --header-color: #404040;
   --distorted-bg: #131313;
   --noise: #ffffff;
 }
@@ -46,12 +46,19 @@ img {
 }
 
 .tall-elem {
-  height: 54.75rem;
+  min-height: 54.75rem;
 }
 
 .elem__container,
 .elem {
   max-width: 50.0625rem;
+}
+
+.elem:not(.tall-elem) {
+  max-width: 50.0625rem;
+}
+.elem:not(.tall-elem) img {
+  min-height: 680px;
 }
 
 a:active,
@@ -101,6 +108,7 @@ span {
   color: var(--header-color);
   font-weight: 200;
   margin-top: 9rem;
+  text-shadow: 0.03em 0.03em 0.1em var(--header-color);
 }
 
 h1 span {
@@ -111,10 +119,6 @@ h3 {
   font-size: 2.82rem;
   letter-spacing: 0.1rem;
   line-height: 4rem;
-}
-
-h4 {
-  font-size: 2.1rem;
 }
 
 h4 {
@@ -139,7 +143,6 @@ a {
   cursor: pointer;
   display: block;
 }
-
 a:hover {
   font-weight: 800;
 }
@@ -156,15 +159,13 @@ header h1 {
   left: 16%;
 }
 header .header__image-container {
-  background-image: url(./images/anivaVeryLarge.jpg);
   background-image: url(./images/Mask\ lighthouse.png);
   background-repeat: no-repeat;
   position: relative;
-  height: 88.9375rem;
   height: 133.9375rem;
   max-width: 100%;
   background-position-x: 100%;
-  background-position-y: -1385px;
+  background-position-y: -86.5625rem;
   filter: grayscale(0.5);
 }
 
@@ -182,6 +183,11 @@ footer {
   width: 100%;
   background-color: var(--footer-color);
   padding: 6rem 0 4.1rem 0;
+}
+footer img {
+  aspect-ratio: unset;
+  -o-object-fit: none;
+     object-fit: none;
 }
 footer .container__grid {
   justify-content: space-between;
@@ -204,11 +210,6 @@ footer .container__grid .footer__legal--col .footer__legal__logo h2 {
   font-size: 4.3rem;
   margin-right: 1rem;
 }
-footer .container__grid .footer__legal--col .footer__legal__logo img {
-  aspect-ratio: unset;
-  -o-object-fit: none;
-     object-fit: none;
-}
 footer .container__grid .footer__legal--col .footer__company-info p {
   margin-bottom: 0.5rem;
 }
@@ -219,9 +220,6 @@ footer .container__grid .footer__links__navigate--col a {
   margin-bottom: 1rem;
 }
 footer .container__grid .footer__social--col img {
-  aspect-ratio: unset;
-  -o-object-fit: none;
-     object-fit: none;
   margin-right: 1.1rem;
 }
 footer .container__grid .footer__social--col a {
@@ -259,13 +257,13 @@ footer .container__grid h4 {
     flex-wrap: wrap-reverse;
   }
   .container .lighthouse .elem,
-.container .elem {
+  .container .elem {
     width: unset;
     max-width: unset;
     width: 801px !important;
   }
   .container .lighthouse .elem img,
-.container .elem img {
+  .container .elem img {
     width: 56.125rem;
   }
 }/*# sourceMappingURL=style.css.map */
