@@ -103,7 +103,7 @@ img {
 .elem:not(.tall-elem) {
     max-width: 50.0625rem;
     img {
-        min-height: 680px;
+        min-height: 42.5rem;
     }
 }
 
@@ -288,7 +288,7 @@ footer {
     }
 }
 
-@media only screen and (max-width: 93.75rem) {
+@media only screen and (max-width: 93.75em) {
     body h1 {
         left: 5%;
     }
@@ -306,7 +306,7 @@ footer {
     .container .elem {
         width: unset;
         max-width: unset;
-        width: 801px !important;
+        width: 50.0625rem !important;
         img {
             width: 56.125rem;
         }

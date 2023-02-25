@@ -108,7 +108,7 @@ img {
   max-width: 50.0625rem;
 }
 .elem:not(.tall-elem) img {
-  min-height: 680px;
+  min-height: 42.5rem;
 }
 
 a:active,
@@ -294,7 +294,7 @@ footer .container__grid h4 {
     margin-right: auto;
   }
 }
-@media only screen and (max-width: 93.75rem) {
+@media only screen and (max-width: 93.75em) {
   body h1 {
     left: 5%;
   }
@@ -310,7 +310,7 @@ footer .container__grid h4 {
   .container .elem {
     width: unset;
     max-width: unset;
-    width: 801px !important;
+    width: 50.0625rem !important;
   }
   .container .lighthouse .elem img,
   .container .elem img {
