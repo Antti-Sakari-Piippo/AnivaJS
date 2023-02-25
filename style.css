@@ -23,7 +23,7 @@ body {
 }
 body::before {
   content: "";
-  background-image: url(./images/grain.png);
+  background-image: url(images/grain.png);
   position: absolute;
   top: 0;
   bottom: 0;
@@ -209,7 +209,7 @@ header h1 {
   left: 16%;
 }
 header .header__image-container {
-  background-image: url(./images/Mask\ lighthouse.png);
+  background-image: url(images/Mask\ lighthouse.png);
   background-repeat: no-repeat;
   position: relative;
   height: 133.9375rem;
