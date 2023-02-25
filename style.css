@@ -154,11 +154,11 @@ col {
 h1,
 span {
   font-size: 6rem;
-  font-size: max(5.5rem, 5vw) !important;
+  font-size: max(5.5rem, 5vw + 0.2rem) !important;
   color: var(--header-color);
   font-weight: 200;
-  margin-top: 9rem;
   text-shadow: 0.03em 0.03em 0.1em var(--header-color);
+  padding-left: 8vw;
 }
 
 h1 span {
@@ -198,24 +198,26 @@ a:hover {
 }
 
 header {
-  height: 97.7rem;
+  height: 120vh;
   position: relative;
   width: 100%;
 }
 header h1 {
-  position: absolute;
   z-index: 1000;
-  top: 22rem;
-  left: 16%;
+  display: flex;
+  place-items: baseline;
+  justify-content: center;
+  flex-direction: column;
+  height: 50%;
 }
 header .header__image-container {
   background-image: url(images/Mask\ lighthouse.png);
   background-repeat: no-repeat;
   position: relative;
-  height: 133.9375rem;
+  height: 183vh;
   max-width: 100%;
   background-position-x: 100%;
-  background-position-y: -86.5625rem;
+  background-position-y: -107vh;
   filter: grayscale(0.5);
 }
 
@@ -295,8 +297,12 @@ footer .container__grid h4 {
   }
 }
 @media only screen and (max-width: 93.75em) {
-  body h1 {
-    left: 5%;
+  body h1,
+  body span {
+    padding-left: 0;
+    font-size: min(5.3rem, 10vw + 1rem) !important;
+    margin-right: 1rem;
+    margin-left: 1rem;
   }
 }
 @media only screen and (max-width: 100em) {
