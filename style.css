@@ -6,24 +6,15 @@
   font-family: "Unna", serif;
 }
 
-:root {
-  --bg: #0e0e0e;
-  --footer-color: #131313;
-  --header-color: #404040;
-  --distorted-bg: #131313;
-  --noise: #ffffff;
-}
-
 body {
   color: white;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004) !important;
   background-repeat: repeat;
-  background-color: var(--bg);
+  background-color: #0e0e0e;
   position: relative;
 }
 body::before {
   content: "";
-  background-image: url(images/grain.png);
   position: absolute;
   top: 0;
   bottom: 0;
@@ -31,6 +22,8 @@ body::before {
   right: 0;
   opacity: 55%;
   z-index: -1;
+  background: linear-gradient(90deg, rgb(29, 29, 29) 0%, rgb(44, 44, 44) 50%, rgb(29, 29, 29) 100%);
+  opacity: 0.6;
 }
 body::after {
   content: "";
@@ -44,7 +37,7 @@ body::after {
   background: transparent url("http://assets.iceable.com/img/noise-transparent.png") repeat 0 0;
   background-repeat: repeat;
   animation: bg-animation 0.2s infinite;
-  opacity: 1;
+  opacity: 0.75;
   visibility: visible;
 }
 @keyframes bg-animation {
@@ -153,16 +146,13 @@ col {
 
 h1,
 span {
-  font-size: 6rem;
-  font-size: max(5.5rem, 5vw + 0.2rem) !important;
-  color: var(--header-color);
+  color: #404040;
+  font-size: min(11rem, 11vw + 1rem);
   font-weight: 200;
-  text-shadow: 0.03em 0.03em 0.1em var(--header-color);
-  padding-left: 8vw;
-}
-
-h1 span {
-  margin-left: 3.6rem;
+  text-shadow: 0.03em 0.03em 0.1em #404040;
+  padding-left: 12vw;
+  margin-inline: auto;
+  margin-left: 0rem;
 }
 
 h3 {
@@ -200,15 +190,15 @@ a:hover {
 header {
   height: 120vh;
   position: relative;
-  width: 100%;
 }
 header h1 {
-  z-index: 1000;
   display: flex;
   place-items: baseline;
   justify-content: center;
   flex-direction: column;
   height: 50%;
+  opacity: 1;
+  z-index: 1000;
 }
 header .header__image-container {
   background-image: url(images/Mask\ lighthouse.png);
@@ -233,7 +223,7 @@ img.full-width {
 
 footer {
   width: 100%;
-  background-color: var(--footer-color);
+  background-color: #131313;
   padding: 6rem 0 4.1rem 0;
 }
 footer img {
@@ -296,13 +286,9 @@ footer .container__grid h4 {
     margin-right: auto;
   }
 }
-@media only screen and (max-width: 93.75em) {
-  body h1,
-  body span {
-    padding-left: 0;
-    font-size: min(5.3rem, 10vw + 1rem) !important;
-    margin-right: 1rem;
-    margin-left: 1rem;
+@media only screen and (max-width: 50em) {
+  .header__image-container {
+    background-position-x: 90% !important;
   }
 }
 @media only screen and (max-width: 100em) {
@@ -321,5 +307,14 @@ footer .container__grid h4 {
   .container .lighthouse .elem img,
   .container .elem img {
     width: 56.125rem;
+  }
+  h1 {
+    padding: 0;
+    display: flex;
+    align-items: center !important;
+  }
+  body h1 span {
+    padding: 0;
+    margin: 0 !important;
   }
 }/*# sourceMappingURL=style.css.map */
