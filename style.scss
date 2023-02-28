@@ -3,7 +3,9 @@ $footer-color: #131313;
 $header-color: #404040;
 $noise: #ffffff;
 
-* {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
