@@ -111,6 +111,19 @@ span {
     padding-left: 12vw;
     margin-inline: auto;
     margin-left: 0rem;
+    pointer-events: none;
+    animation: fadeIn 1s ease-in;
+
+    animation: 2s ease 0s normal forwards 1s fadeIn;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 h3 {
