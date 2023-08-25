@@ -16,6 +16,7 @@
   <body>
     <header>
       <div class="header__image-container">
+        <h1 class="visually-hidden">The Aniva Lighthouse</h1>
         <h1>THE ANIVA<span>LIGHTHOUSE</span></h1>
       </div>
     </header>
@@ -26,7 +27,7 @@
             class="tall-elem"
             id="lighthouse2"
             src="images/anivaMid.jpeg"
-            aria-label="The Aniva lighthouse on a misty day"
+            alt="The Aniva lighthouse on a misty day"
           />
         </div>
         <div class="elem tall-elem">
@@ -135,8 +136,8 @@
         <div class="elem">
           <img
             src="images/anivaReactor.jpg"
-            alt="the reactor"
-            aria-label="power reactor"
+            alt="power reactor"
+            aria-label="The power reactor of the lighthouse"
           />
         </div>
         <div class="elem">
@@ -144,7 +145,6 @@
             id="lewis-lamp"
             src="images/anivaLamp.jpg"
             alt="the lewis lamp"
-            aria-label="the lewis lamp"
           />
         </div>
       </div>
@@ -153,7 +153,6 @@
       class="full-width"
       src="images/anivaBirds.jpg "
       alt="seagulls on a window"
-      aria-label="seagulls on a window"
     />
     <div class="container">
       <div class="container__grid">
@@ -190,11 +189,7 @@
           </p>
         </div>
         <div class="elem">
-          <img
-            src="images/anivaTrash.jpg"
-            alt="junk inside of aniva"
-            aria-label="junk inside of aniva"
-          />
+          <img src="images/anivaTrash.jpg" alt="junk inside of Aniva" />
         </div>
       </div>
     </div>
@@ -203,13 +198,13 @@
         <div class="footer__legal--col col">
           <div class="footer__legal__logo flex">
             <h2 class="italic">Aniva</h2>
-            <img src="images/AnivaLogo.png" alt="Aniva logo" />
+            <img src="images/AnivaLogo.png" alt="Aniva website logo" />
           </div>
           <div class="footer__company-info">
             <p>President in perpetuo: Joseph Wilham</p>
             <p>Vice President: Sara Powell</p>
             <p>Chair: Michael Walsberg</p>
-            <br />
+            <br aria-hidden="true" />
             <p>
               Aniva is a registered company (registration no 27559) in Russia.
               Founded 1945.
@@ -221,42 +216,74 @@
         <div class="footer__social--col col">
           <h4>STAY CONNECTED</h4>
           <div class="social">
-            <div class="footer__social--col--row flex">
-              <img src="images/akar-icons_facebook-fill.png" alt="facebook" />
-              <a href="">Facebook</a>
-            </div>
-            <div class="footer__social--col--row flex">
-              <img src="images/akar-icons_twitter-fill.png" alt="Twitter" />
-              <a href="">Twitter</a>
-            </div>
-            <div class="footer__social--col--row flex">
-              <img src="images/akar-icons_youtube-fill.png" alt="Youtube" />
-              <a href="">Youtube</a>
-            </div>
-            <div class="footer__social--col--row flex">
-              <img src="images/akar-icons_instagram-fill.png" alt="Instagram" />
-              <a href="">Instagram</a>
-            </div>
+            <a
+              href="#"
+              class="footer__social--col--row flex"
+              aria-label="link to facebook"
+            >
+              <img
+                src="images/akar-icons_facebook-fill.png"
+                alt="facebook"
+                aria-hidden="true"
+              />
+              <p>Facebook</p>
+            </a>
+            <a
+              href="#"
+              class="footer__social--col--row flex"
+              aria-label="link to sites facebook page"
+            >
+              <img
+                src="images/akar-icons_twitter-fill.png"
+                alt="Twitter"
+                aria-hidden="true"
+              />
+              <p aria-hidden="true">Twitter</p>
+            </a>
+            <a
+              href="#"
+              class="footer__social--col--row flex"
+              aria-label="link to sites Youtube page"
+            >
+              <img
+                src="images/akar-icons_youtube-fill.png"
+                alt="Youtube"
+                aria-hidden="true"
+              />
+              <p aria-hidden="true">Youtube</p>
+            </a>
+            <a
+              href="#"
+              class="footer__social--col--row flex"
+              aria-label="link to sites Instagram page"
+            >
+              <img
+                src="images/akar-icons_instagram-fill.png"
+                alt="Instagram"
+                aria-hidden="true"
+              />
+              <p aria-hidden="true">Instagram</p>
+            </a>
           </div>
         </div>
         <div class="footer__links--holder">
           <h4>NAVIGATE</h4>
           <div class="footer__links__navigate flex">
             <div class="footer__links__navigate--col">
-              <a href="">Blog</a>
-              <a href="">Events</a>
-              <a href="">The Author</a>
-              <a href="">The Society</a>
-              <a href="">Membership</a>
-              <a href="">Contact Us</a>
+              <a href="#">Blog</a>
+              <a href="#">Events</a>
+              <a href="#">The Author</a>
+              <a href="#">The Society</a>
+              <a href="#">Membership</a>
+              <a href="#">Contact Us</a>
             </div>
             <div class="footer__links__navigate--col">
-              <a href="">About Us</a>
-              <a href="">Store</a>
-              <a href="">Legal Notices</a>
-              <a href="">Members Area</a>
-              <a href="">Renew Membership</a>
-              <a href="">Become a member</a>
+              <a href="#">About Us</a>
+              <a href="#">Store</a>
+              <a href="#">Legal Notices</a>
+              <a href="#">Members Area</a>
+              <a href="#">Renew Membership</a>
+              <a href="#">Become a member</a>
             </div>
           </div>
         </div>

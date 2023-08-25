@@ -78,6 +78,18 @@ a:focus {
   flex-wrap: wrap;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
 #lewis-lamp {
   -o-object-position: 74% 0;
      object-position: 74% 0;
@@ -103,10 +115,10 @@ col {
 
 h1,
 span {
-  color: #404040;
+  color: #2f2f2f;
   font-size: min(12rem, 12vw + 1rem);
   font-weight: 200;
-  text-shadow: 0.03em 0.03em 0.1em #404040;
+  text-shadow: 0.03em 0.03em 0.1em #2f2f2f;
   padding-left: 12vw;
   margin-inline: auto;
   margin-left: 0rem;
@@ -145,13 +157,16 @@ p {
   font-style: italic;
 }
 
-a {
+a,
+footer a > p {
   font-size: 1.35rem;
   color: white;
   cursor: pointer;
   display: block;
+  margin-bottom: 0;
 }
-a:hover {
+a:hover,
+footer a > p:hover {
   font-weight: 800;
 }
 
@@ -233,7 +248,7 @@ footer .container__grid .footer__links__navigate--col a {
 footer .container__grid .footer__social--col img {
   margin-right: 1.1rem;
 }
-footer .container__grid .footer__social--col a {
+footer .container__grid .footer__social--col p {
   display: flex;
   justify-content: center;
   align-items: center;
