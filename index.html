@@ -14,6 +14,18 @@
     <title>The Aniva lighthouse</title>
   </head>
   <body>
+    <svg class="noise" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+      <filter id="noiseFilter">
+        <feTurbulence
+          type="fractalNoise"
+          baseFrequency="7"
+          numOctaves="12"
+          stitchTiles="stitch"
+        />
+      </filter>
+
+      <rect width="100%" height="100%" filter="url(#noiseFilter)" />
+    </svg>
     <header>
       <div class="header__image-container">
         <h1 class="visually-hidden">The Aniva Lighthouse</h1>
@@ -26,7 +38,7 @@
           <img
             class="tall-elem"
             id="lighthouse2"
-            src="images/anivaMid.jpeg"
+            src="images/anivaMid.webp"
             alt="The Aniva lighthouse on a misty day"
           />
         </div>
@@ -35,7 +47,7 @@
           <div class="elem__container">
             <div class="elem__container__text">
               <p>
-                The Aniva Lighthouse is the most famous Lighthouse in Sahhalin.
+                The Aniva Lighthouse is the most famous Lighthouse in Sakhalin.
                 This abandoned lighthouse is difficult to reach: it is situated
                 on a small rock called Sivuchya near the rocky Cape Aniva. You
                 can only get here by water. The tides are strong here, but the
@@ -126,7 +138,7 @@
         </div>
         <div class="elem">
           <img
-            src="images/anivaStars.jpg"
+            src="images/anivaStars.webp"
             alt="stars"
             aria-label="staircase of the lighthouse"
           />
@@ -135,7 +147,7 @@
       <div class="container__grid">
         <div class="elem">
           <img
-            src="images/anivaReactor.jpg"
+            src="images/anivaReactor.webp"
             alt="power reactor"
             aria-label="The power reactor of the lighthouse"
           />
@@ -143,7 +155,7 @@
         <div class="elem">
           <img
             id="lewis-lamp"
-            src="images/anivaLamp.jpg"
+            src="images/anivaLamp.webp"
             alt="the lewis lamp"
           />
         </div>
@@ -151,7 +163,7 @@
     </div>
     <img
       class="full-width"
-      src="images/anivaBirds.jpg "
+      src="images/anivaBirds.webp "
       alt="seagulls on a window"
     />
     <div class="container">
@@ -189,7 +201,7 @@
           </p>
         </div>
         <div class="elem">
-          <img src="images/anivaTrash.jpg" alt="junk inside of Aniva" />
+          <img src="images/anivaTrash.webp" alt="junk inside of Aniva" />
         </div>
       </div>
     </div>
@@ -198,7 +210,7 @@
         <div class="footer__legal--col col">
           <div class="footer__legal__logo flex">
             <h2 class="italic">Aniva</h2>
-            <img src="images/AnivaLogo.png" alt="Aniva website logo" />
+            <img src="images/AnivaLogo.webp" alt="Aniva website logo" />
           </div>
           <div class="footer__company-info">
             <p>President in perpetuo: Joseph Wilham</p>
@@ -222,7 +234,7 @@
               aria-label="link to facebook"
             >
               <img
-                src="images/akar-icons_facebook-fill.png"
+                src="images/akar-icons_facebook-fill.webp"
                 alt="facebook"
                 aria-hidden="true"
               />
@@ -234,7 +246,7 @@
               aria-label="link to sites facebook page"
             >
               <img
-                src="images/akar-icons_twitter-fill.png"
+                src="images/akar-icons_twitter-fill.webp"
                 alt="Twitter"
                 aria-hidden="true"
               />
@@ -246,7 +258,7 @@
               aria-label="link to sites Youtube page"
             >
               <img
-                src="images/akar-icons_youtube-fill.png"
+                src="images/akar-icons_youtube-fill.webp"
                 alt="Youtube"
                 aria-hidden="true"
               />
@@ -258,7 +270,7 @@
               aria-label="link to sites Instagram page"
             >
               <img
-                src="images/akar-icons_instagram-fill.png"
+                src="images/akar-icons_instagram-fill.webp"
                 alt="Instagram"
                 aria-hidden="true"
               />

@@ -1,7 +1,8 @@
-$bg: #0e0e0e;
-$footer-color: #131313;
+$bg: #000000;
+$footer-color: #060606;
 $header-color: #2f2f2f;
 $noise: #ffffff;
+$element-space: 6rem;
 
 *,
 *::before,
@@ -19,6 +20,8 @@ body {
     background-repeat: repeat;
     background-color: $bg;
     position: relative;
+    overflow-x: hidden;
+
     &::before {
         content: '';
         position: absolute;
@@ -28,9 +31,16 @@ body {
         right: 0;
         opacity: 55%;
         z-index: -1;
-        background: linear-gradient(90deg, rgb(23, 23, 23) 0%, rgb(44, 44, 44) 50%, rgb(23, 23, 23) 100%);
+        background: linear-gradient(90deg, #0f0f0f 0%, rgb(20, 20, 20) 50%, #0f0f0f 100%);
         opacity: 0.6;
     }
+}
+
+.noise {
+    position: absolute;
+    height: 100%;
+    opacity: 0.06;
+    z-index: 99999;
 }
 
 img {
@@ -66,12 +76,8 @@ a:focus {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 6rem;
-    gap: 6rem;
-}
-
-.container__grid:last-child {
-    margin-bottom: 6rem;
+    gap: $element-space;
+    margin-bottom: $element-space;
 }
 
 .flex {
@@ -145,7 +151,7 @@ h4 {
     font-size: 1.875rem;
 }
 p {
-    font-size: 1.35rem;
+    font-size: clamp(1.1rem, 1.06rem + 0.16vw, 1.25rem);
     line-height: 1.6rem;
     font-weight: 100;
     letter-spacing: 0.14rem;
@@ -179,7 +185,7 @@ header {
         z-index: 1000;
     }
     .header__image-container {
-        background-image: url(images/Mask\ lighthouse.png);
+        background-image: url(images/Mask\ lighthouse.webp);
         background-repeat: no-repeat;
         position: relative;
         height: 100%;
@@ -196,7 +202,7 @@ img.ripped {
 
 img.full-width {
     width: 100%;
-    margin-bottom: 6rem;
+    margin-bottom: $element-space;
     min-height: 40vh;
 }
 
@@ -212,10 +218,12 @@ footer {
         justify-content: space-between;
         margin: 0 11vw 0 11vw;
         width: min(106.25rem, 80%);
-        grid-template-columns: repeat(3, 1fr);
         margin: auto;
         align-items: baseline;
         margin-bottom: 0 !important;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         .footer__legal--col {
             margin-top: -2rem;
             max-width: 58ch;
@@ -275,11 +283,14 @@ footer {
 }
 
 @media only screen and (max-width: 100em) {
-    .container__grid {
+    .container__grid:not(footer .container__grid) {
         flex-wrap: wrap;
     }
     .container__grid.lighthouse {
         flex-wrap: wrap-reverse;
+    }
+    .footer__links__navigate.flex {
+        flex-wrap: nowrap;
     }
 
     .container .lighthouse .elem,
