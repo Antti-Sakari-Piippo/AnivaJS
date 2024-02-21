@@ -157,6 +157,10 @@ span {
 }
 
 // defaults
+ul,
+ol {
+    list-style-type: none;
+}
 img {
     object-fit: cover;
     max-width: 100%;
@@ -271,6 +275,7 @@ footer {
                 align-items: center;
             }
             .footer__social--col--row {
+                width: fit-content;
                 margin: 0.55rem 0;
                 cursor: pointer;
             }

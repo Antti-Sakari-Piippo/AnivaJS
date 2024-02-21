@@ -25,13 +25,28 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
+      rel="preload"
       href="https://fonts.googleapis.com/css2?family=Unna:ital@0;1&display=swap"
-      rel="stylesheet"
+      as="style"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Unna:ital@0;1&display=swap"
+      crossorigin
+    />
+
+    <!-- Fallback for users with JavaScript disabled -->
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Unna:ital@0;1&display=swap"
+        crossorigin
+      />
+    </noscript>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <!-- Title -->
-    <title>The Aniva lighthouse</title>
+    <title>The Aniva Lighthouse</title>
   </head>
   <body>
     <svg
@@ -310,22 +325,22 @@
         <div class="footer__links--holder">
           <h4>NAVIGATE</h4>
           <div class="footer__links__navigate flex">
-            <div class="footer__links__navigate--col">
-              <a href="#">Blog</a>
-              <a href="#">Events</a>
-              <a href="#">The Author</a>
-              <a href="#">The Society</a>
-              <a href="#">Membership</a>
-              <a href="#">Contact Us</a>
-            </div>
-            <div class="footer__links__navigate--col">
-              <a href="#">About Us</a>
-              <a href="#">Store</a>
-              <a href="#">Legal Notices</a>
-              <a href="#">Members Area</a>
-              <a href="#">Renew Membership</a>
-              <a href="#">Become a member</a>
-            </div>
+            <ul class="footer__links__navigate--col">
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Events</a></li>
+              <li><a href="#">The Author</a></li>
+              <li><a href="#">The Society</a></li>
+              <li><a href="#">Membership</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+            <ul class="footer__links__navigate--col">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Store</a></li>
+              <li><a href="#">Legal Notices</a></li>
+              <li><a href="#">Members Area</a></li>
+              <li><a href="#">Renew Membership</a></li>
+              <li><a href="#">Become a member</a></li>
+            </ul>
           </div>
         </div>
       </div>

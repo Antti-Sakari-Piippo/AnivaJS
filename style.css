@@ -143,6 +143,11 @@ span {
     opacity: 1;
   }
 }
+ul,
+ol {
+  list-style-type: none;
+}
+
 img {
   -o-object-fit: cover;
      object-fit: cover;
@@ -260,6 +265,8 @@ footer .container__grid .footer__social--col p {
   align-items: center;
 }
 footer .container__grid .footer__social--col .footer__social--col--row {
+  width: -moz-fit-content;
+  width: fit-content;
   margin: 0.55rem 0;
   cursor: pointer;
 }
