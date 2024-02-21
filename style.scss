@@ -1,8 +1,12 @@
-$bg: #000000;
+$bg-color: #000000;
 $footer-color: #060606;
 $header-color: #2f2f2f;
 $noise: #ffffff;
 $element-space: 6rem;
+$header-height: 120vh;
+
+$container-elem-width: 47%;
+$container-width: 80%;
 
 *,
 *::before,
@@ -18,7 +22,7 @@ body {
     color: white;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004) !important;
     background-repeat: repeat;
-    background-color: $bg;
+    background-color: $bg-color;
     position: relative;
     overflow-x: hidden;
 
@@ -36,26 +40,33 @@ body {
     }
 }
 
+// utilities
 .noise {
     position: absolute;
     height: 100%;
     opacity: 0.06;
     z-index: 99999;
+    pointer-events: none;
+}
+.italic {
+    font-style: italic;
 }
 
-img {
-    object-fit: cover;
-    max-width: 100%;
-    filter: grayscale(1);
+img.ripped {
+    position: relative;
+    width: 100%;
 }
 
-#lighthouse2 {
-    object-position: 64% 10%;
+img.full-width {
+    width: 100%;
+    margin-bottom: $element-space;
+    min-height: 40vh;
 }
 
 .tall-elem {
     min-height: 54.75rem;
 }
+
 .elem__container,
 .elem {
     max-width: 50.0625rem;
@@ -68,10 +79,6 @@ img {
     }
 }
 
-a:active,
-a:focus {
-    outline: none;
-}
 .container__grid {
     display: flex;
     justify-content: center;
@@ -97,15 +104,11 @@ a:focus {
     white-space: nowrap;
 }
 
-#lewis-lamp {
-    object-position: 74% 0;
-}
-
 .container {
-    width: 80%;
+    width: $container-width;
     margin: auto;
     .elem {
-        width: 47%;
+        width: $container-elem-width;
         img {
             aspect-ratio: 4/3;
         }
@@ -119,6 +122,16 @@ col {
     max-width: 27vw;
 }
 
+// uniques
+#lewis-lamp {
+    object-position: 74% 0;
+}
+
+#lighthouse_faraway_img {
+    object-position: 64% 10%;
+}
+//
+
 h1,
 span {
     color: $header-color;
@@ -130,9 +143,10 @@ span {
     margin-left: 0rem;
     pointer-events: none;
     animation: fadeIn 1s ease-in;
-    animation: 2s ease 0s normal forwards 1s fadeIn;
+    transition: opacity 1s ease-in-out 1s;
 }
 
+// animations
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -142,14 +156,28 @@ span {
     }
 }
 
+// defaults
+img {
+    object-fit: cover;
+    max-width: 100%;
+    filter: grayscale(1);
+}
+
+a:active,
+a:focus {
+    outline: none;
+}
+
 h3 {
     font-size: 2.82rem;
     letter-spacing: 0.1rem;
     line-height: 4rem;
 }
+
 h4 {
     font-size: 1.875rem;
 }
+
 p {
     font-size: clamp(1.1rem, 1.06rem + 0.16vw, 1.25rem);
     line-height: 1.6rem;
@@ -157,9 +185,7 @@ p {
     letter-spacing: 0.14rem;
     margin-bottom: 1rem;
 }
-.italic {
-    font-style: italic;
-}
+
 a,
 footer a > p {
     font-size: 1.35rem;
@@ -173,19 +199,19 @@ footer a > p {
 }
 
 header {
-    height: 120vh;
+    height: $header-height;
     position: relative;
     h1 {
         display: flex;
         place-items: baseline;
         justify-content: center;
         flex-direction: column;
-        height: 77%;
+        height: 70%;
         opacity: 1;
         z-index: 1000;
     }
     .header__image-container {
-        background-image: url(images/Mask\ lighthouse.webp);
+        background-image: url(images/maskLighthouse.webp);
         background-repeat: no-repeat;
         position: relative;
         height: 100%;
@@ -194,16 +220,6 @@ header {
         background-position-y: 115.6%;
         filter: grayscale(0.5);
     }
-}
-img.ripped {
-    position: relative;
-    width: 100%;
-}
-
-img.full-width {
-    width: 100%;
-    margin-bottom: $element-space;
-    min-height: 40vh;
 }
 
 footer {

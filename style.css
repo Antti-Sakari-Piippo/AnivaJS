@@ -34,18 +34,22 @@ body::before {
   height: 100%;
   opacity: 0.06;
   z-index: 99999;
+  pointer-events: none;
 }
 
-img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  max-width: 100%;
-  filter: grayscale(1);
+.italic {
+  font-style: italic;
 }
 
-#lighthouse2 {
-  -o-object-position: 64% 10%;
-     object-position: 64% 10%;
+img.ripped {
+  position: relative;
+  width: 100%;
+}
+
+img.full-width {
+  width: 100%;
+  margin-bottom: 6rem;
+  min-height: 40vh;
 }
 
 .tall-elem {
@@ -62,11 +66,6 @@ img {
 }
 .elem:not(.tall-elem) img {
   min-height: 42.5rem;
-}
-
-a:active,
-a:focus {
-  outline: none;
 }
 
 .container__grid {
@@ -94,11 +93,6 @@ a:focus {
   white-space: nowrap;
 }
 
-#lewis-lamp {
-  -o-object-position: 74% 0;
-     object-position: 74% 0;
-}
-
 .container {
   width: 80%;
   margin: auto;
@@ -117,6 +111,16 @@ col {
   max-width: 27vw;
 }
 
+#lewis-lamp {
+  -o-object-position: 74% 0;
+     object-position: 74% 0;
+}
+
+#lighthouse_faraway_img {
+  -o-object-position: 64% 10%;
+     object-position: 64% 10%;
+}
+
 h1,
 span {
   color: #2f2f2f;
@@ -128,7 +132,7 @@ span {
   margin-left: 0rem;
   pointer-events: none;
   animation: fadeIn 1s ease-in;
-  animation: 2s ease 0s normal forwards 1s fadeIn;
+  transition: opacity 1s ease-in-out 1s;
 }
 
 @keyframes fadeIn {
@@ -139,6 +143,18 @@ span {
     opacity: 1;
   }
 }
+img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 100%;
+  filter: grayscale(1);
+}
+
+a:active,
+a:focus {
+  outline: none;
+}
+
 h3 {
   font-size: 2.82rem;
   letter-spacing: 0.1rem;
@@ -155,10 +171,6 @@ p {
   font-weight: 100;
   letter-spacing: 0.14rem;
   margin-bottom: 1rem;
-}
-
-.italic {
-  font-style: italic;
 }
 
 a,
@@ -183,12 +195,12 @@ header h1 {
   place-items: baseline;
   justify-content: center;
   flex-direction: column;
-  height: 77%;
+  height: 70%;
   opacity: 1;
   z-index: 1000;
 }
 header .header__image-container {
-  background-image: url(images/Mask\ lighthouse.webp);
+  background-image: url(images/maskLighthouse.webp);
   background-repeat: no-repeat;
   position: relative;
   height: 100%;
@@ -196,17 +208,6 @@ header .header__image-container {
   background-position-x: 100%;
   background-position-y: 115.6%;
   filter: grayscale(0.5);
-}
-
-img.ripped {
-  position: relative;
-  width: 100%;
-}
-
-img.full-width {
-  width: 100%;
-  margin-bottom: 6rem;
-  min-height: 40vh;
 }
 
 footer {
