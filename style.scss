@@ -63,20 +63,17 @@ img.full-width {
     min-height: 40vh;
 }
 
-.tall-elem {
-    min-height: 54.75rem;
-}
-
-.elem__container,
 .elem {
     max-width: 50.0625rem;
 }
 
-.elem:not(.tall-elem) {
-    max-width: 50.0625rem;
-    img {
-        min-height: 42.5rem;
-    }
+.elem img {
+    height: 98%;
+}
+
+.elem.tall-elem img {
+    min-height: 54.75rem;
+    height: 98%;
 }
 
 .container__grid {
@@ -84,6 +81,7 @@ img.full-width {
     justify-content: center;
     align-items: center;
     gap: $element-space;
+    align-items: stretch;
     margin-bottom: $element-space;
 }
 
