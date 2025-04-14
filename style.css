@@ -224,14 +224,14 @@ footer img {
      object-fit: none;
 }
 footer .container__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   justify-content: space-between;
   margin: 0 11vw 0 11vw;
   width: min(106.25rem, 80%);
   margin: auto;
   align-items: baseline;
   margin-bottom: 0 !important;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 footer .container__grid .footer__legal--col {
   margin-top: -2rem;
